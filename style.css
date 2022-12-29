@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    /*background-color: rgb(65, 120, 74);*/
+    flex-wrap: wrap;
+    max-width: 1600px;
+    
+    
+}
+.child{
+    background-color: rgb(186, 209, 15);
+    border: 10;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: thin solid black;
+}
+.change{
+    background-color: blue;
+    border: thin dotted greenyellow;
+}
+
