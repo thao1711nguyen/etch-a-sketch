@@ -27,13 +27,22 @@ function random(){
 function addEvent(){  
 const children = document.querySelectorAll('.child');
 children.forEach((child) => {
+    let lightness = 100;
     child.addEventListener('mouseover',(e) => {
         //e.target.classList.add('change');
+
+        /*generate random rgb color
         let red = random();
         let green = random();
         let blue = random();
-        e.target.style.backgroundColor = `rgb(${red},${green},${blue})`;
-        
+        e.target.style.backgroundColor = `rgb(${red},${green},${blue})`;*/
+
+        //Each pass add 10% black 
+        let hue = Math.random()*361;
+        let saturation = Math.random()*101;
+        lightness-=10;
+        e.target.style.backgroundColor = `hsl(${hue},${saturation}%,${lightness}%)`;
+        //e.target.style.backgroundColor = 'blue';
     });
     child.addEventListener('mouseout',(e) =>{
         //e.target.classList.remove('change');
