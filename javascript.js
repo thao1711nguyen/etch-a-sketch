@@ -8,7 +8,10 @@ function createGrid (n=16){
         let childSquare = document.createElement('div');
         const container = document.querySelector('.container');
         container.appendChild(childSquare);
-        childSquare.classList.add('child');   
+        childSquare.classList.add('child');
+        let width = container.scrollWidth/n;
+        childSquare.style.width = `${width}px`;
+        childSquare.style.height = `${width}px`;
     }
 }
 function removeGrid() {
