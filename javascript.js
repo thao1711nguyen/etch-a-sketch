@@ -44,11 +44,14 @@ children.forEach((child) => {
         e.target.style.backgroundColor = `hsl(${hue},${saturation}%,${lightness}%)`;
         //e.target.style.backgroundColor = 'blue';
     });
+    /*
     child.addEventListener('mouseout',(e) =>{
         //e.target.classList.remove('change');
         e.target.style.backgroundColor = 'white';
         
     });
+    */
+
 });
 }
 const button = document.querySelector('.btn');
