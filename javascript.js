@@ -1,5 +1,9 @@
-//document.body.onload=createGrid(7);
-function createGrid (n){
+
+window.addEventListener('load', (e) => { //make a default 16x16 grid when page is loaded
+    createGrid();
+    addEvent();
+});
+function createGrid (n=16){
     for(let i=0; i<n*n; i++){
         let childSquare = document.createElement('div');
         const container = document.querySelector('.container');
@@ -13,7 +17,8 @@ function removeGrid() {
         for(const child of oldChildren) {
             container.removeChild(child);
         }
-}  
+}
+function addEvent(){  
 const children = document.querySelectorAll('.child');
 children.forEach((child) => {
     child.addEventListener('mouseover',(e) => {
@@ -27,11 +32,13 @@ children.forEach((child) => {
         
     });
 });
+}
 const button = document.querySelector('.btn');
 button.addEventListener('click', (e) => {
     let number=prompt('Please enter a number that less than 100: ');
     removeGrid();
     createGrid(number);
+    addEvent();
 });
 
 
