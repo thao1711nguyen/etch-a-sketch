@@ -1,12 +1,20 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container{
     display: flex;
-    /*background-color: rgb(65, 120, 74);*/
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     max-width: 1600px;
+    max-height: 1600px;
+    justify-content: center;
+    align-items: center;
     
     
 }
 .child{
+    
     background-color: rgb(186, 209, 15);
     border: 10;
     width: 100px;
@@ -17,5 +25,11 @@
 .change{
     background-color: blue;
     border: thin dotted greenyellow;
+}
+.btn{
+    font-size: 30px;
+    margin: 50px;
+    padding: 20px;
+    
 }
 
