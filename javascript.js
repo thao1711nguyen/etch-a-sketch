@@ -21,17 +21,23 @@ function removeGrid() {
             container.removeChild(child);
         }
 }
+function random(){
+        return Math.random()*256;
+}
 function addEvent(){  
 const children = document.querySelectorAll('.child');
 children.forEach((child) => {
     child.addEventListener('mouseover',(e) => {
-        e.target.classList.add('change');
-        //e.target.style.backgroundColor = "yellow";
+        //e.target.classList.add('change');
+        let red = random();
+        let green = random();
+        let blue = random();
+        e.target.style.backgroundColor = `rgb(${red},${green},${blue})`;
         
     });
     child.addEventListener('mouseout',(e) =>{
-        e.target.classList.remove('change');
-        //e.target.style.backgroundColor ='rgb(186, 209, 15)';
+        //e.target.classList.remove('change');
+        e.target.style.backgroundColor = 'white';
         
     });
 });
